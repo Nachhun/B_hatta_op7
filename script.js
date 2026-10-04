@@ -229,17 +229,16 @@ function initCalendarEvent() {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
-    const title = 'Kristian Joshua Emnas & Pich Hatha Van Wedding';
+    const title = 'Kristian Joshua Emnas & Pich Hatha Van Wedding Reception';
     const description = 
       'Wedding reception celebration of Kristian & Hatha.\n\n' +
-      'Ceremony: 11:00 AM (Please arrive by 10:30 AM) at 3 Kowhai Drive, Darfield, Canterbury.\n' +
       'Reception: 5:30 PM at Jolly Seafood Restaurant, 187 Wigram Road, Wigram, Christchurch.\n\n' +
       'Dress code: Formal / Semi-Formal (Kindly avoid white and ivory).';
-    const location = 'Christchurch & Darfield, Canterbury, New Zealand';
+    const location = 'Jolly Seafood Restaurant, 187 Wigram Road, Wigram, Christchurch, New Zealand';
 
-    // Dates in UTC: AEDT is UTC+11. 22 Nov 2026 10:30 AM AEDT = 21 Nov 2026 23:30 UTC
-    const startUtc = '20261121T233000Z';
-    const endUtc = '20261122T123000Z';
+    // Dates in UTC: NZDT is UTC+13. 22 Nov 2026 5:30 PM NZDT = 22 Nov 2026 04:30 UTC
+    const startUtc = '20261122T043000Z';
+    const endUtc = '20261122T110000Z';
 
     const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startUtc}/${endUtc}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
 
